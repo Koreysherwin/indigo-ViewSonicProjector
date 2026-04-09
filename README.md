@@ -6,7 +6,7 @@ Built for reliability with proper state tracking, debounce logic, and real-world
 
 ---
 
-## ✨ Features
+## Features
 
 * Power control (On / Off)
 * Accurate power state tracking:
@@ -28,7 +28,7 @@ Built for reliability with proper state tracking, debounce logic, and real-world
 
 ---
 
-## 🧰 Requirements
+## Requirements
 
 * Indigo 2025.x or later
 * Global Caché iTach IP2SL (or compatible TCP → RS-232 bridge)
@@ -36,7 +36,7 @@ Built for reliability with proper state tracking, debounce logic, and real-world
 
 ---
 
-## ⚙️ Setup
+## Setup
 
 1. Install the plugin in Indigo
 2. Create a new device:
@@ -51,7 +51,7 @@ Built for reliability with proper state tracking, debounce logic, and real-world
 
 ---
 
-## 🔌 Supported Commands
+## Supported Commands
 
 * Power On / Off
 * Power Status Query
@@ -62,7 +62,7 @@ Built for reliability with proper state tracking, debounce logic, and real-world
 
 ---
 
-## 📊 Device States
+## Device States
 
 | State               | Description                     |
 | ------------------- | ------------------------------- |
@@ -76,7 +76,7 @@ Built for reliability with proper state tracking, debounce logic, and real-world
 
 ---
 
-## 🛠 Debug Logging
+## Debug Logging
 
 Enable via:
 
@@ -92,7 +92,7 @@ Shows:
 
 ---
 
-## ⚠️ Notes
+## Notes
 
 * Uses debounce logic to avoid false cooling/warming triggers
 * Optimized for Global Caché serial buffering behavior
@@ -100,18 +100,18 @@ Shows:
 
 ---
 
-## 📦 Version
+##  Version
 
 Current version: **v1.4.3**
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 Built with help from ChatGPT and refined in real-world AV deployment.
 
 ---
 
-## 📄 License
+##  License
 
 MIT License
