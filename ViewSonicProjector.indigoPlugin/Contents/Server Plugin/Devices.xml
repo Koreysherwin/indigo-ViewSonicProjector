@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Devices>
+
+    <Device type="custom" id="viewsonicProjector">
+        <Name>ViewSonic Projector (Custom)</Name>
+        <UiDisplayStateId>power</UiDisplayStateId>
+
+        <ConfigUI>
+            <Field id="address" type="textfield" defaultValue="192.168.0.242">
+                <Label>iTach IP Address:</Label>
+            </Field>
+            <Field id="port" type="textfield" defaultValue="4999">
+                <Label>iTach TCP Port:</Label>
+            </Field>
+            <Field id="pollSeconds" type="textfield" defaultValue="30">
+                <Label>Poll Interval (seconds):</Label>
+            </Field>
+            <Field id="inputDelaySeconds" type="textfield" defaultValue="12">
+                <Label>Input Query Delay After ON (seconds):</Label>
+            </Field>
+            <Field id="maintenanceAlertHours" type="textfield" defaultValue="20000">
+                <Label>Maintenance Alert Threshold (hours):</Label>
+            </Field>
+        </ConfigUI>
+
+        <States>
+            <State id="power">
+                <TriggerLabel>Power State</TriggerLabel>
+                <ControlPageLabel>Power State</ControlPageLabel>
+                <ValueType>
+                    <List>
+                        <Option value="unknown">Unknown</Option>
+                        <Option value="off">Off</Option>
+                        <Option value="on">On</Option>
+                        <Option value="warming">Warming Up</Option>
+                        <Option value="cooling">Cooling Down</Option>
+                    </List>
+                </ValueType>
+            </State>
+            <State id="input">
+                <TriggerLabel>Current Input</TriggerLabel>
+                <ControlPageLabel>Current Input</ControlPageLabel>
+                <ValueType>
+                    <List>
+                        <Option value="unknown">Unknown</Option>
+                        <Option value="hdmi1">HDMI 1</Option>
+                        <Option value="hdmi2">HDMI 2</Option>
+                    </List>
+                </ValueType>
+            </State>
+            <State id="readyState" readonly="YES">
+                <TriggerLabel>System Ready</TriggerLabel>
+                <ControlPageLabel>System Ready</ControlPageLabel>
+                <ValueType>String</ValueType>
+            </State>
+            <State id="rawState" readonly="YES">
+                <TriggerLabel>Raw Power State Byte</TriggerLabel>
+                <ControlPageLabel>Raw Power State Byte</ControlPageLabel>
+                <ValueType>Number</ValueType>
+            </State>
+            <State id="rawInput" readonly="YES">
+                <TriggerLabel>Raw Input Byte</TriggerLabel>
+                <ControlPageLabel>Raw Input Byte</ControlPageLabel>
+                <ValueType>Number</ValueType>
+            </State>
+            <State id="lastResponse" readonly="YES">
+                <TriggerLabel>Last Response (Hex)</TriggerLabel>
+                <ControlPageLabel>Last Response (Hex)</ControlPageLabel>
+                <ValueType>String</ValueType>
+            </State>
+            <State id="gcAddress" readonly="YES">
+                <TriggerLabel>GC Unit Address</TriggerLabel>
+                <ControlPageLabel>GC Unit Address</ControlPageLabel>
+                <ValueType>String</ValueType>
+            </State>
+            <State id="lampHours" readonly="YES">
+                <TriggerLabel>Light Source Usage Time (hrs)</TriggerLabel>
+                <ControlPageLabel>Light Source Usage Time (hrs)</ControlPageLabel>
+                <ValueType>Number</ValueType>
+            </State>
+            <State id="equivalentLampHours" readonly="YES">
+                <TriggerLabel>Equivalent Light Source Hours</TriggerLabel>
+                <ControlPageLabel>Equivalent Light Source Hours</ControlPageLabel>
+                <ValueType>Number</ValueType>
+            </State>
+            <State id="maintenanceDue" readonly="YES">
+                <TriggerLabel>Maintenance Due</TriggerLabel>
+                <ControlPageLabel>Maintenance Due</ControlPageLabel>
+                <ValueType>String</ValueType>
+            </State>
+            <State id="maintenanceSummary" readonly="YES">
+                <TriggerLabel>Maintenance Summary</TriggerLabel>
+                <ControlPageLabel>Maintenance Summary</ControlPageLabel>
+                <ValueType>String</ValueType>
+            </State>
+            <State id="lastErrorSummary" readonly="YES">
+                <TriggerLabel>Last Error Summary</TriggerLabel>
+                <ControlPageLabel>Last Error Summary</ControlPageLabel>
+                <ValueType>String</ValueType>
+            </State>
+        </States>
+    </Device>
+
+    <Device type="relay" id="viewsonicProjectorRelay">
+        <Name>ViewSonic Projector (Relay-style On/Off)</Name>
+        <UiDisplayStateId>power</UiDisplayStateId>
+
+        <ConfigUI>
+            <Field id="address" type="textfield" defaultValue="192.168.0.242">
+                <Label>iTach IP Address:</Label>
+            </Field>
+            <Field id="port" type="textfield" defaultValue="4999">
+                <Label>iTach TCP Port:</Label>
+            </Field>
+            <Field id="pollSeconds" type="textfield" defaultValue="30">
+                <Label>Poll Interval (seconds):</Label>
+            </Field>
+            <Field id="inputDelaySeconds" type="textfield" defaultValue="12">
+                <Label>Input Query Delay After ON (seconds):</Label>
+            </Field>
+            <Field id="maintenanceAlertHours" type="textfield" defaultValue="20000">
+                <Label>Maintenance Alert Threshold (hours):</Label>
+            </Field>
+        </ConfigUI>
+
+        <States>
+            <State id="power">
+                <TriggerLabel>Power State</TriggerLabel>
+                <ControlPageLabel>Power State</ControlPageLabel>
+                <ValueType>
+                    <List>
+                        <Option value="unknown">Unknown</Option>
+                        <Option value="off">Off</Option>
+                        <Option value="on">On</Option>
+                        <Option value="warming">Warming Up</Option>
+                        <Option value="cooling">Cooling Down</Option>
+                    </List>
+                </ValueType>
+            </State>
+            <State id="input">
+                <TriggerLabel>Current Input</TriggerLabel>
+                <ControlPageLabel>Current Input</ControlPageLabel>
+                <ValueType>
+                    <List>
+                        <Option value="unknown">Unknown</Option>
+                        <Option value="hdmi1">HDMI 1</Option>
+                        <Option value="hdmi2">HDMI 2</Option>
+                    </List>
+                </ValueType>
+            </State>
+            <State id="readyState" readonly="YES">
+                <TriggerLabel>System Ready</TriggerLabel>
+                <ControlPageLabel>System Ready</ControlPageLabel>
+                <ValueType>String</ValueType>
+            </State>
+            <State id="rawState" readonly="YES">
+                <TriggerLabel>Raw Power State Byte</TriggerLabel>
+                <ControlPageLabel>Raw Power State Byte</ControlPageLabel>
+                <ValueType>Number</ValueType>
+            </State>
+            <State id="rawInput" readonly="YES">
+                <TriggerLabel>Raw Input Byte</TriggerLabel>
+                <ControlPageLabel>Raw Input Byte</ControlPageLabel>
+                <ValueType>Number</ValueType>
+            </State>
+            <State id="lastResponse" readonly="YES">
+                <TriggerLabel>Last Response (Hex)</TriggerLabel>
+                <ControlPageLabel>Last Response (Hex)</ControlPageLabel>
+                <ValueType>String</ValueType>
+            </State>
+            <State id="gcAddress" readonly="YES">
+                <TriggerLabel>GC Unit Address</TriggerLabel>
+                <ControlPageLabel>GC Unit Address</ControlPageLabel>
+                <ValueType>String</ValueType>
+            </State>
+            <State id="lampHours" readonly="YES">
+                <TriggerLabel>Light Source Usage Time (hrs)</TriggerLabel>
+                <ControlPageLabel>Light Source Usage Time (hrs)</ControlPageLabel>
+                <ValueType>Number</ValueType>
+            </State>
+            <State id="equivalentLampHours" readonly="YES">
+                <TriggerLabel>Equivalent Light Source Hours</TriggerLabel>
+                <ControlPageLabel>Equivalent Light Source Hours</ControlPageLabel>
+                <ValueType>Number</ValueType>
+            </State>
+            <State id="maintenanceDue" readonly="YES">
+                <TriggerLabel>Maintenance Due</TriggerLabel>
+                <ControlPageLabel>Maintenance Due</ControlPageLabel>
+                <ValueType>String</ValueType>
+            </State>
+            <State id="maintenanceSummary" readonly="YES">
+                <TriggerLabel>Maintenance Summary</TriggerLabel>
+                <ControlPageLabel>Maintenance Summary</ControlPageLabel>
+                <ValueType>String</ValueType>
+            </State>
+            <State id="lastErrorSummary" readonly="YES">
+                <TriggerLabel>Last Error Summary</TriggerLabel>
+                <ControlPageLabel>Last Error Summary</ControlPageLabel>
+                <ValueType>String</ValueType>
+            </State>
+            <State id="onOffState" readonly="YES">
+                <TriggerLabel>On/Off State</TriggerLabel>
+                <ControlPageLabel>On/Off State</ControlPageLabel>
+                <ValueType>Bool</ValueType>
+            </State>
+        </States>
+    </Device>
+
+</Devices>

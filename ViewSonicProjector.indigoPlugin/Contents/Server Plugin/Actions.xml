@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Actions>
+    <Action id="powerOn" deviceFilter="self.viewsonicProjector,self.viewsonicProjectorRelay" uiPath="DeviceActions">
+        <Name>Projector: Power On</Name>
+        <CallbackMethod>powerOnAction</CallbackMethod>
+    </Action>
+    <Action id="powerOff" deviceFilter="self.viewsonicProjector,self.viewsonicProjectorRelay" uiPath="DeviceActions">
+        <Name>Projector: Power Off</Name>
+        <CallbackMethod>powerOffAction</CallbackMethod>
+    </Action>
+    <Action id="inputHdmi1" deviceFilter="self.viewsonicProjector,self.viewsonicProjectorRelay" uiPath="DeviceActions">
+        <Name>Projector: Input HDMI 1</Name>
+        <CallbackMethod>inputHdmi1Action</CallbackMethod>
+    </Action>
+    <Action id="inputHdmi2" deviceFilter="self.viewsonicProjector,self.viewsonicProjectorRelay" uiPath="DeviceActions">
+        <Name>Projector: Input HDMI 2</Name>
+        <CallbackMethod>inputHdmi2Action</CallbackMethod>
+    </Action>
+    <Action id="refreshStatus" deviceFilter="self.viewsonicProjector,self.viewsonicProjectorRelay" uiPath="DeviceActions">
+        <Name>Projector: Refresh Status</Name>
+        <CallbackMethod>refreshStatusAction</CallbackMethod>
+    </Action>
+</Actions>

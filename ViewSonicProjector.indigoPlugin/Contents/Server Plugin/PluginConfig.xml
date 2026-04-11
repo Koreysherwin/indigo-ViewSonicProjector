@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PluginConfig>
+    <Field id="logRs232Tx" type="checkbox" defaultValue="false">
+        <Label>Log RS232 TX data to Event Log</Label>
+        <Description>When enabled, transmitted RS232 hex data will be written to the Indigo log.</Description>
+    </Field>
+
+    <Field id="logRs232Rx" type="checkbox" defaultValue="false">
+        <Label>Log RS232 RX data to Event Log</Label>
+        <Description>When enabled, received RS232 hex data will be written to the Indigo log.</Description>
+    </Field>
+
+    <Field id="verboseProtocolDecode" type="checkbox" defaultValue="false">
+        <Label>Show human-readable protocol decode when recognized</Label>
+        <Description>Adds a simple decode for recognized ViewSonic packets, such as power queries and power status responses.</Description>
+    </Field>
+</PluginConfig>
